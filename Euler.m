@@ -1,27 +1,22 @@
-
-
-%% Computational Engineering | Burgers' Equation
-% Author: Gago, Edgar
+%% Burgers equation
+% Author:Gago, Edgar
 % Date 28/10/2020
-% Subject: Comp. Engineering
+% Subject: Computational engineering
 %
-%% Core of the program
-% DESCRIPTION
-% Euler time integration scheme computation
+%% Euler
+% Description
+% Euler time scheme integration
 %
-% INPUTS
-% C = Convective term, n step
-% D = Convective term, n step
-% u = Velocity at the n step for th k mode
-% dt = time step
+% Inputs
+% C: Convective term at n time step
+% D: Diffusive term at n time step
+% u: velocity value a k mode
+% dt: time step
 %
-% OUTPUT
+% Outputs
+% x: variable at n+1 time step
 %
-% x = Result of the Euler scheme for the 
-% n+1 time step
-%
-%% Code
-
+%% CODE
 function x = Euler(D,C,dt,u)
 
 x = u - dt*(D+C);

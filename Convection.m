@@ -1,23 +1,21 @@
-
-%% Computational Engineering | Burgers' Equation
-% Author: Gago, Edgar
+%% Burgers equation
+% Author:Gago, Edgar
 % Date 28/10/2020
-% Subject: Comp. Engineering
+% Subject: Computational engineering
 %
-%% Core of the program
-% DESCRIPTION
-%Compoutation of the convective term
+%% Convection
+% Description
+% Computes the convective term of the equation
 %
-% INPUTS
-% N = Range of N (modes) to evaluate
-% k = Mode to evaluate
-% u = velocity of the mode k and the time step i
+% Inputs
+% N: Mesh size
+% k: mode
+% u: velocity field
 %
-% OUTPUT
+% Outputs
+% C: Convective term 
 %
-% C = Convection value for the mode k
-%
-%% Code
+%% CODE
 
 function [C] = Convection(k,N,u)
 

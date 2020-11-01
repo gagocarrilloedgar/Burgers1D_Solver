@@ -1,12 +1,11 @@
-%% Computational Engineering | Burgers' Equation
-% Author: Gago, Edgar
+%% Burgers equation
+% Author:Gago, Edgar
 % Date 28/10/2020
-% Subject: Comp. Engineering
+% Subject: Computational engineering
 %
-
 %% Solving Parameters
-N = 10:5:100;           % Levels for the summatory
-Re = 10:2:50;                % Reynolds Number
+N = 10:30:100;           % Levels for the summatory
+Re = 10:10:50;                % Reynolds Number
 
 %% Auxiliar Parameters
 rho = 1;                % Fluid Density

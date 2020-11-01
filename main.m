@@ -1,8 +1,12 @@
-%% Computational Engineering | Burgers' Equation
-% Author: Gago, Edgar
+%% Burgers equation
+% Author:Gago, Edgar
 % Date 28/10/2020
-% Subject: Comp. Engineering
-%% Core of the program
+% Subject: Computational engineering
+%
+%% ComputeDiffusive
+% Description
+% Core of the porgram, calls the different main scripts
+%% CODE
 
 clc
 clear;

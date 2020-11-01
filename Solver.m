@@ -1,31 +1,29 @@
-%% Computational Engineering | Burgers' Equation
-% Author: Gago, Edgar
+%% Burgers equation
+% Author:Gago, Edgar
 % Date 28/10/2020
-% Subject: Comp. Engineering
+% Subject: Computational engineering
 %
-%% Core of the program
-% DESCRIPTION
-% Time integration solver for the differnt schemes 
-% ans case studies
+%% Solver
+% Description
+% Time integration solver, computes the velocity in each mode and time step
 %
-% N = Range of N (modes) to evaluate
-% Re = Range of Re number to evaluate
-% delta = Convective term, n steps to evaluate
-% Ct = Range of Time step constant
-% ck = Kolmogrovs constant
-% ops = SCHEME & LES selector
-% a = N selector
-% u = initialized velocities
-% delta = minimum allowed error
-% Dt = time step
+% Inputs
+% N: Mesh size
+% Re: Reynolds number
+% Ct: Time step constant
+% delta: minimum admissible error
+% ops: Integration scheme  and LES selector
+% Dt: time step
+% a: control variable for a special case scenario (see inputs)
+% u: initialised velocity vector
+% ck: Kolmogrov constant
 %
-% OUTPUT
+% Outputs
+% u: final velocity vector
+% it: number of iterations
+% time: computational time
 %
-% u = Converged velocity (solution)
-% it = Number of iterations of the mode
-% time = Time of the process
-%
-%% Code
+%% CODE
 
 function [u,it,time] = Solver(Dt,delta,u,N,Re,ops,ck,a)
 
@@ -64,14 +62,13 @@ while diff>delta
     
     diff = max(max(abs(u(:,it+1)-u(:,it))));
     
+    it = it+1;
     
     if(it>12000)
         fprintf("Process exceed 10000 iterations");
         time = toc;
         break;
     end
-    
-    it = it+1;
     
 end
 

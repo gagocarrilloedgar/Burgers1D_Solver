@@ -1,22 +1,20 @@
-
-%% Computational Engineering | Burgers' Equation
-% Author: Gago, Edgar
+%% Burgers equation
+% Author:Gago, Edgar
 % Date 28/10/2020
-% Subject: Comp. Engineering
+% Subject: Computational engineering
 %
-%% Core of the program
-% DESCRIPTION
-% Postprocess of the results
+%% ComputeDiffusive
+% PostProcess
+% Plots the final results
 %
-% INPUTS
-% Ek_save = Total energy  saved from the different
-% case studies
-% Re = Range of the used Re
-% N = Range of the used modes
-% Ct = Range of time integrations steps
+% Inputs
+% Ek_save: matrix of the energy interchanges on each mode
+% N: Mesh size
+% Re: Reynolds number
+% Ct: Time step constant
 %
-%% Code
-
+%
+%% CODE
 function PostProcess(Ek_save, N,Re,Ct)
 
 set(groot,'defaulttextinterpreter','latex');

@@ -1,30 +1,27 @@
-
-%% Computational Engineering | Burgers' Equation
-% Author: Gago, Edgar
+%% Burgers equation
+% Author:Gago, Edgar
 % Date 28/10/2020
-% Subject: Comp. Engineering
+% Subject: Computational engineering
 %
-%% Core of the program
-% DESCRIPTION
-% Evalutaion of the SOlver for different parameters
-% such as N, Re, and Ct
+%% CodeCore
+% Description
+% Three fors in order to evaluate different case scenarios, save the matrix
+% computed energy
 %
-% INPUTS
-% N = Range of N (modes) to evaluate
-% Re = Range of Re number to evaluate
-% delta = Convective term, n steps to evaluate
-% Ct = Range of Time step constant
-% ck = Kolmogrovs constant
-% ops = time step
+% Inputs
+% N: Mesh size
+% Re: Reynolds number
+% ops: Integration scheme selector
+% Ct: Time step constant
+% delta: minimum admissible error
+% ck: Kolmogrov constant
 %
-% OUTPUT
+% Outputs
+% Ek_save: matrix of the energy interchanges on each mode
+% it_: matrix saving each case scenario iterations
+% time_: matrix saving each case scenario computational time
 %
-% Ek_save = Total energy matrices per mode, Re and CT
-% it_ = Number of iteration per mode, Re and CT
-% time_ = Time for computing each Ek per mode, Re and CT
-%
-%% Code
-
+%% CODE
 function [Ek_save,it_,time_] = CodeCore(N,Re,delta,Ct,ck,ops)
 
 
