@@ -24,7 +24,7 @@ Some of the results you should get when runing the code are:
 
 ![1D DNS and LES results for N number of modes](./Images/DNS_LES.png)
 
-![Computational cost for a DNS simulation](./Images/Re_N_12k.png) 
+![Computational cost for a DNS simulation](./Images/Re_N_12K.png) 
 
 
 Please contact me to the following email if you find any mistake ar have any questions regarding the development:
